@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css.css" type="text/css">
+    <script src="./js/js.js" type="text/javascript" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        div{
+            width: 150px;
+            height: 60px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.5s;
+            border:1px solid #333;
+        }
+        div:hover{
+            background: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕 난 테스트용이에용</h1>
+
+    
+<pre>
+    이 버튼을 누르면 너는 android 인지 ios 인지 알수있어영
+
+
+</pre>
+    <div>s눌럴라아아</div>
+    <script>
+		document.write("현재 사용 중인 브라우저의 이름은 " + navigator.appName + "입니다.<br>");
+		document.write("또한, 해당 브라우저의 코드명은 " + navigator.appCodeName + "입니다.");
+        document.write("현재 사용 중인 브라우저의 버전 정보는 " + navigator.appVersion + "입니다.<br><br>");
+        document.write("userAgent 프로퍼티로 알 수 있는 추가 정보는 " + navigator.userAgent + "입니다.");
+
+        $(document).ready(function(){
+
+    
+        $("div").click(function(){
+            // alert("test");
+            console.log("tttt");
+
+            var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+
+            if ( varUA.indexOf('android') > -1) {
+                //안드로이드;
+                console.log("android");
+                alert("안드로이드임");
+                // return "android";
+            } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+                //IOS
+                console.log("ios");
+                alert("아이폰임");
+                // return "ios";
+            } else {
+                //아이폰, 안드로이드 외
+                // return "other";
+                console.log("n");
+                alert("n");
+            }
+                
+        });
+        });
+
+	</script>
+</body>
+</html>
