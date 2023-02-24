@@ -45,8 +45,7 @@
 
         $(document).ready(function(){
 
-    
-        $("div").click(function(){
+            window.onload=funrtion(){
             // alert("test");
             console.log("tttt");
 
@@ -56,7 +55,7 @@
                 //안드로이드;
                 console.log("android");
                 alert("안드로이드임");
-                // return "android";
+                return "android";
             } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
                 //IOS
                 console.log("ios");
@@ -69,7 +68,7 @@
                 alert("n");
             }
                 
-        });
+        };
         });
 
 	</script>
